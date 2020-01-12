@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4_4Features.CarouselViewPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <CarouselView x:Name="CVMovies"
+                          Grid.Row="0">
+                <!-- TODO PeekAreaInsets="20" -->
+                <!-- TODO
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+                </CarouselView.ItemsLayout>-->
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="30" Margin="20"
+                               BackgroundColor="{Binding BgColor}">
+                               <StackLayout>
+                                   <Image Source="{Binding ImageUrl}"  WidthRequest="300"
+                                          HeightRequest="200" Aspect="AspectFit"/>
+                                   <Label Text="{Binding Title}" FontSize="Title"
+                                          HorizontalTextAlignment="Center"/>
+                                   <Label Text="{Binding Cast}" FontSize="Title"
+                                          HorizontalTextAlignment="Center" />
+                               </StackLayout>
+                         </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <!-- TODO
+            <IndicatorView IndicatorView.ItemsSourceBy="CVMovies"
+                           IndicatorColor="LightGray"
+                           SelectedIndicatorColor="Black"
+                           Grid.Row="1"/>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

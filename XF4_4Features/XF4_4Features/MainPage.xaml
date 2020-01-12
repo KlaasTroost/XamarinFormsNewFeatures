@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" x:Class="XF4_4Features.MainPage"
+             BackgroundColor="Black" >
+    <!-- ScrollView -->
+        <!-- Place new controls here -->
+        <StackLayout>
+            <Image Source="https://media2.giphy.com/media/wa8uMtV7bmdGTGGmD7/giphy.gif"
+                   HeightRequest="200" WidthRequest="200" IsAnimationPlaying="True" />
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems Mode="Execute">
+                        <SwipeItem Text="Subscribe"
+                                   BackgroundColor="Yellow"
+                                   Invoked="SwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <Frame BorderColor="AliceBlue" BackgroundColor="LightGoldenrodYellow"
+                       Margin="10" CornerRadius="30">
+                    <StackLayout>
+                        <Label Text="Swipe from Left"
+                               HorizontalTextAlignment="Center"
+                               FontSize="Title" />
+                        <Label Text="SwipeView Demo "
+                               HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </Frame>
+            </SwipeView>
+            <SwipeView>
+                <SwipeView.RightItems>
+                    <SwipeItems Mode="Reveal">
+                        <SwipeItem Text="Subscribe"
+                                   BackgroundColor="Yellow"
+                                   Invoked="SwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <Frame BorderColor="AliceBlue" BackgroundColor="LightGoldenrodYellow"
+                       Margin="10" CornerRadius="30">
+                    <StackLayout>
+                        <Label Text="Swipe from Right"
+                               HorizontalTextAlignment="Center"
+                               FontSize="Title" />
+                        <Label Text="SwipeView Demo "
+                               HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </Frame>
+            </SwipeView>
+            <SwipeView>
+                <SwipeView.TopItems>
+                    <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="RemainOpen">
+                        <SwipeItem Text="Subscribe"
+                                   BackgroundColor="Yellow"
+                                   Invoked="SwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.TopItems>
+                <Frame BorderColor="AliceBlue" BackgroundColor="LightGoldenrodYellow"
+                       Margin="10" CornerRadius="30">
+                    <StackLayout>
+                        <Label Text="Swipe from Top"
+                               HorizontalTextAlignment="Center"
+                               FontSize="Title" />
+                        <Label Text="SwipeView Demo "
+                               HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </Frame>
+            </SwipeView>
+            <SwipeView>
+                <SwipeView.BottomItems>
+                    <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="Close">
+                        <SwipeItem Text="Subscribe"
+                                   BackgroundColor="Yellow"
+                                   Invoked="SwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.BottomItems>
+                <Frame BorderColor="AliceBlue" BackgroundColor="LightGoldenrodYellow"
+                       Margin="10" CornerRadius="30">
+                    <StackLayout>
+                        <Label Text="Swipe from Bottom"
+                               HorizontalTextAlignment="Center"
+                               FontSize="Title" />
+                        <Label Text="SwipeView Demo "
+                               HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </Frame>
+            </SwipeView>
+        </StackLayout>
+    <!-- /ScrollView -->
+</ContentPage>
