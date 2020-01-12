@@ -10,12 +10,13 @@
         <StackLayout>
             <Image Source="https://media2.giphy.com/media/wa8uMtV7bmdGTGGmD7/giphy.gif"
                    HeightRequest="200" WidthRequest="200" IsAnimationPlaying="True" />
-            <SwipeView>
+            <SwipeView Margin="10">
                 <SwipeView.LeftItems>
                     <SwipeItems Mode="Execute">
                         <SwipeItem Text="Subscribe"
                                    BackgroundColor="Yellow"
-                                   Invoked="SwipeItem_Invoked" />
+                                   Invoked="SwipeItem_Invoked"/>
+                                   <!-- TODO IconImageSource="icon_menu"/ -->
                     </SwipeItems>
                 </SwipeView.LeftItems>
                 <Frame BorderColor="AliceBlue" BackgroundColor="LightGoldenrodYellow"
@@ -29,7 +30,7 @@
                     </StackLayout>
                 </Frame>
             </SwipeView>
-            <SwipeView>
+            <SwipeView Margin="10">
                 <SwipeView.RightItems>
                     <SwipeItems Mode="Reveal">
                         <SwipeItem Text="Subscribe"
@@ -48,7 +49,7 @@
                     </StackLayout>
                 </Frame>
             </SwipeView>
-            <SwipeView>
+            <SwipeView Margin="10">
                 <SwipeView.TopItems>
                     <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="RemainOpen">
                         <SwipeItem Text="Subscribe"
@@ -67,7 +68,7 @@
                     </StackLayout>
                 </Frame>
             </SwipeView>
-            <SwipeView>
+            <SwipeView Margin="10">
                 <SwipeView.BottomItems>
                     <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="Close">
                         <SwipeItem Text="Subscribe"
