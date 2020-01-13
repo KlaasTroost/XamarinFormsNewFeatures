@@ -5,18 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" x:Class="XF4_4Features.MainPage"
              BackgroundColor="Black" >
-    <!-- ScrollView -->
+    <ScrollView>
         <!-- Place new controls here -->
         <StackLayout>
             <Image Source="https://media2.giphy.com/media/wa8uMtV7bmdGTGGmD7/giphy.gif"
-                   HeightRequest="200" WidthRequest="200" IsAnimationPlaying="True" />
+                   HeightRequest="200" WidthRequest="200" IsAnimationPlaying="True" /> <!-- TODO -->
             <SwipeView Margin="10">
                 <SwipeView.LeftItems>
-                    <SwipeItems Mode="Execute">
+                    <SwipeItems Mode="Reveal">
                         <SwipeItem Text="Subscribe"
                                    BackgroundColor="Yellow"
-                                   Invoked="SwipeItem_Invoked"/>
-                                   <!-- TODO IconImageSource="icon_menu"/ -->
+                                   Invoked="SwipeItem_Invoked"
+                                   IconImageSource="icon_menu"/>
                     </SwipeItems>
                 </SwipeView.LeftItems>
                 <Frame BorderColor="AliceBlue" BackgroundColor="LightGoldenrodYellow"
@@ -55,6 +55,9 @@
                         <SwipeItem Text="Subscribe"
                                    BackgroundColor="Yellow"
                                    Invoked="SwipeItem_Invoked" />
+                        <SwipeItem Text="Unsubscribe"
+                                   BackgroundColor="Red"
+                                   Invoked="SwipeItem_Invoked" />
                     </SwipeItems>
                 </SwipeView.TopItems>
                 <Frame BorderColor="AliceBlue" BackgroundColor="LightGoldenrodYellow"
@@ -88,5 +91,5 @@
                 </Frame>
             </SwipeView>
         </StackLayout>
-    <!-- /ScrollView -->
+    </ScrollView>
 </ContentPage>

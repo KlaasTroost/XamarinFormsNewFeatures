@@ -17,8 +17,8 @@ namespace XF4_4Features
                 });
 
             //TODO
-            var navigationPage = new NavigationPage(new MainPage());
-            //var navigationPage = new NavigationPage(new CarouselViewPage());
+            //var navigationPage = new NavigationPage(new MainPage());
+            var navigationPage = new NavigationPage(new CarouselViewPage());
             navigationPage.BarBackgroundColor = Color.Black;
             MainPage = navigationPage;
         }

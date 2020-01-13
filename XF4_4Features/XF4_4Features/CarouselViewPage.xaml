@@ -11,12 +11,13 @@
             </Grid.RowDefinitions>
 
             <CarouselView x:Name="CVMovies"
-                          Grid.Row="0">
+                          Grid.Row="0"
+                          PeekAreaInsets="20">
                 <!-- TODO PeekAreaInsets="20" -->
-                <!-- TODO
+                 <!--TODO-->
                 <CarouselView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
-                </CarouselView.ItemsLayout>-->
+                </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Frame CornerRadius="30" Margin="20"
@@ -34,11 +35,10 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <!-- TODO
             <IndicatorView IndicatorView.ItemsSourceBy="CVMovies"
-                           IndicatorColor="LightGray"
-                           SelectedIndicatorColor="Black"
-                           Grid.Row="1"/>-->
+                           IndicatorColor="Blue"
+                           SelectedIndicatorColor="Red"
+                           Grid.Row="1"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
