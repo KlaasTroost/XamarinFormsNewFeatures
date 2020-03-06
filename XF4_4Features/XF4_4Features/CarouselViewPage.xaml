@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XF4_4Features.CarouselViewPage">
     <ContentPage.Content>
-        <Grid>
+        <Grid Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="400"/>
 
@@ -12,12 +12,11 @@
 
             <CarouselView x:Name="CVMovies"
                           Grid.Row="0"
+                          ItemsUpdatingScrollMode="KeepLastItemInView"
                           PeekAreaInsets="20">
-                <!-- TODO PeekAreaInsets="20" -->
-                 <!--TODO-->
-                <CarouselView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
-                </CarouselView.ItemsLayout>
+                <!--<CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20" />
+                </CarouselView.ItemsLayout>-->
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Frame CornerRadius="30" Margin="20"
@@ -38,6 +37,7 @@
             <IndicatorView IndicatorView.ItemsSourceBy="CVMovies"
                            IndicatorColor="Blue"
                            SelectedIndicatorColor="Red"
+                           HorizontalOptions="Center"
                            Grid.Row="1"/>
         </Grid>
     </ContentPage.Content>
