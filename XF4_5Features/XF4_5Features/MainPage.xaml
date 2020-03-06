@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="XF4_5Features.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Regular" TargetType="Label">
+                <Setter Property="FontFamily" Value="RijksoverheidSansWebText-Regular"/>
+                <Setter Property="FontAttributes" Value="None"/>
+                <Setter Property="FontSize" Value="24" />
+            </Style>
+            <Style x:Key="Bold" TargetType="Label">
+                <Setter Property="FontFamily" Value="RijksoverheidSansWebText-Bold"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="24" />
+            </Style>
+            <Style x:Key="Italic" TargetType="Label">
+                <Setter Property="FontFamily" Value="RijksoverheidSansWebText-Italic"/>
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="FontSize" Value="24" />
+            </Style>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <VisualStateManager.VisualStateGroups>
+	    <VisualStateGroup Name="ColorStates">
+		    <VisualState Name="Red">
+			    <VisualState.Setters>
+				    <Setter TargetName="TargetLabel1" Property="Label.BackgroundColor" Value="#340002" />
+				    <Setter TargetName="TargetLabel1" Property="Label.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetLabel2" Property="Label.BackgroundColor" Value="#340002" />
+				    <Setter TargetName="TargetLabel2" Property="Label.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetLabel3" Property="Label.BackgroundColor" Value="#340002" />
+				    <Setter TargetName="TargetLabel3" Property="Label.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetButton1" Property="Button.BackgroundColor" Value="#340002" />
+				    <Setter TargetName="TargetButton1" Property="Button.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetButton2" Property="Button.BackgroundColor" Value="#340002" />
+				    <Setter TargetName="TargetButton2" Property="Button.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetButton3" Property="Button.BackgroundColor" Value="#340002" />
+				    <Setter TargetName="TargetButton3" Property="Button.TextColor" Value="#920e0c" />
+			    </VisualState.Setters>
+		    </VisualState>
+
+		    <VisualState Name="Green">
+			    <VisualState.Setters>
+				    <Setter TargetName="TargetLabel1" Property="Label.BackgroundColor" Value="#117864" />
+				    <Setter TargetName="TargetLabel1" Property="Label.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetLabel2" Property="Label.BackgroundColor" Value="#117864" />
+				    <Setter TargetName="TargetLabel2" Property="Label.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetLabel3" Property="Label.BackgroundColor" Value="#117864" />
+				    <Setter TargetName="TargetLabel3" Property="Label.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetButton1" Property="Button.BackgroundColor" Value="#117864" />
+				    <Setter TargetName="TargetButton1" Property="Button.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetButton2" Property="Button.BackgroundColor" Value="#117864" />
+				    <Setter TargetName="TargetButton2" Property="Button.TextColor" Value="#920e0c" />
+				    <Setter TargetName="TargetButton3" Property="Button.BackgroundColor" Value="#117864" />
+				    <Setter TargetName="TargetButton3" Property="Button.TextColor" Value="#920e0c" />
+			    </VisualState.Setters>
+		    </VisualState>
+
+		    <VisualState Name="Blue">
+			    <VisualState.Setters>
+				    <Setter TargetName="TargetLabel1" Property="Label.BackgroundColor" Value="#4a707a" />
+				    <Setter TargetName="TargetLabel1" Property="Label.TextColor" Value="#94b0b7" />
+				    <Setter TargetName="TargetLabel2" Property="Label.BackgroundColor" Value="#4a707a" />
+				    <Setter TargetName="TargetLabel2" Property="Label.TextColor" Value="#94b0b7" />
+				    <Setter TargetName="TargetLabel3" Property="Label.BackgroundColor" Value="#4a707a" />
+				    <Setter TargetName="TargetLabel3" Property="Label.TextColor" Value="#94b0b7" />
+				    <Setter TargetName="TargetButton1" Property="Button.BackgroundColor" Value="#4a707a" />
+				    <Setter TargetName="TargetButton1" Property="Button.TextColor" Value="#94b0b7" />
+				    <Setter TargetName="TargetButton2" Property="Button.BackgroundColor" Value="#4a707a" />
+				    <Setter TargetName="TargetButton2" Property="Button.TextColor" Value="#94b0b7" />
+				    <Setter TargetName="TargetButton3" Property="Button.BackgroundColor" Value="#4a707a" />
+				    <Setter TargetName="TargetButton3" Property="Button.TextColor" Value="#94b0b7" />
+			    </VisualState.Setters>
+		    </VisualState>
+	    </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
+    <StackLayout Padding="20">
+        <!-- Place new controls here -->
+        <Label x:Name="TargetLabel1" Text="finally version 4.5 is stable (Style)" Style="{StaticResource Bold}"/>
+        <Label x:Name="TargetLabel2" Text="finally version 4.5 is stable (Style)" Style="{StaticResource Regular}"/>
+        <Label x:Name="TargetLabel3" Text="finally version 4.5 is stable (Style)" Style="{StaticResource Italic}"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="20" Padding="20">
+            <Button x:Name="TargetButton1" Text="Red" Clicked="Button1_Clicked"/>
+            <Button x:Name="TargetButton2" Text="Green" Clicked="Button2_Clicked"/>
+            <Button x:Name="TargetButton3" Text="Blue" Clicked="Button3_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
