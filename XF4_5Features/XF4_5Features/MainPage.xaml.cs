@@ -18,6 +18,8 @@ namespace XF4_5Features
         {
             On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersHomeIndicatorAutoHidden(true);
             On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPreferredStatusBarUpdateAnimation(UIStatusBarAnimation.None);
+
+           
             
             InitializeComponent();
 
@@ -27,16 +29,19 @@ namespace XF4_5Features
         void Button1_Clicked(System.Object sender, System.EventArgs e)
         {
             VisualStateManager.GoToState(this, "Red");
+            VisualStateManager.GoToState(sender as Button, "Disabled");
         }
 
         void Button2_Clicked(System.Object sender, System.EventArgs e)
         {
             VisualStateManager.GoToState(this, "Green");
+            VisualStateManager.GoToState(sender as Button, "Disabled");
         }
 
         void Button3_Clicked(System.Object sender, System.EventArgs e)
         {
             VisualStateManager.GoToState(this, "Blue");
+            VisualStateManager.GoToState(sender as Button, "Disabled");
         }
     }
 }
